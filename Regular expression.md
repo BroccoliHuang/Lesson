@@ -55,7 +55,7 @@ print(re.findall('zo+', 'z'))  # []
 print(re.findall('zo+', 'zoooo'))  # ['zoooo']
 ```
 
-## ?:
+## ()
 ### 正常無刮號
 ```
 print(re.findall('\d+\.\w+$', 'demo.1.2.34.py'))  # ['34.py']
@@ -202,15 +202,15 @@ print(re.findall('[\\W]', 'aA0!@#$%^&*()_+'))  # ['!', '@', '#', '$', '%', '^', 
 
 # 作業
 ```
-s = '黃世豪 broccolihuang@kkbox.com http://www.google.com 22043台北市南港區園區街 3-2 號 11 樓 0911006080 A123456789 192.168.1.2 Julia Wu juliawu@kkfarm@google.com https://zh-tw.wikipedia.org/ 11F., No. 3-2, Park St., Nangang Dist., Taipei City 115, Taiwan (R.O.C.) 0933-333-333 F222222222 252.253.254.255'
+s = '花椰菜 broccolihuang@kkbox.com http://www.google.com 22043台北市南港區園區街 3-2 號 11 樓 0911111111 A323456789 192.168.1.2 Julia Wu juliawu@kkfarm@google.com https://zh-tw.wikipedia.org/ 11F., No. 3-2, Park St., Nangang Dist., Taipei City 115, Taiwan (R.O.C.) 0933-333-333 F322222222 252.253.254.255'
 ```
 請將上面字串 s，用 re 套件，並且不用 if（可用迴圈）輸出以下結果
 ```
 ['broccolihuang@kkbox.com', 'juliawu@kkfarm@google.com']
 ['http://www.google.com', 'https://zh-tw.wikipedia.org/']
-['0911006080', '0933-333-333']
+['0911111111', '0933-333-333']
 ['22043台北市南港區園區街 3-2 號 11 樓', '11F., No. 3-2, Park St., Nangang Dist., Taipei City 115, Taiwan (R.O.C.)']
-['A123456789', 'F222222222']
+['A323456789', 'F322222222']
 ['192.168.1.2', '252.253.254.255']
-['黃世豪', 'Julia Wu']
+['花椰菜', 'Julia Wu']
 ```
